@@ -1,0 +1,877 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+
+
+
+h1.entry-title {
+    display: none;
+}
+/* Login screen  */
+
+.chat-login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(145deg, #e0f7fa, #f1f8e9);
+    padding: 40px 20px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.chat-login-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.6s ease;
+}
+
+.chat-login-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #4db6ac;
+}
+
+.chat-login-card h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.chat-login-message {
+    font-size: 17px;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.chat-login-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #4db6ac, #00796b);
+    color: #fff !important;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    text-decoration: none !important;
+}
+
+.chat-login-button:hover {
+    background: linear-gradient(135deg, #00796b, #004d40);
+}
+
+.chat-login-hint {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.chat-login-hint a {
+    color: #00796b;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.chat-login-hint a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Logout Button Css  */
+
+.menu-item-logout a {
+    color: #ff6b81 !important;
+    padding: 8px 35px 8px 15px !important;
+    position: relative;
+    font-weight: 600;
+    background: rgba(255, 107, 129, 0.1);
+}
+
+.menu-item-logout a:before {
+    content: "\f2f5";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 13px;
+    font-size: 14px;
+    height: 18px;
+}
+
+.menu-item-logout a:hover {
+    /* background: rgba(112, 5, 21, 0.1); */
+    border-radius: 4px;
+}
+
+/* Chat Screen Css  */
+
+.season_tabs {
+    position: relative;
+    min-height: 627px;
+    clear: both;
+    margin: 25px 0;
+    background: #1C504A;
+}
+.season_tab {
+  float: left;  
+  clear: both;
+  width: 286px;
+}
+.season_tab:not(:first-child) {
+  margin-top: 10px;
+}
+.season_tab label img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  margin-right: 5px;
+}
+.season_tab label {
+  background: #4D7A75;
+  padding: 15px 20px;
+  /* border: 1px solid #ccc; */
+  font-size: 21px;
+  left: 1px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 9px;
+}
+/* .season_tabs::before {
+  content: '';
+  position: absolute;
+  background: #E2F7FC;
+  width: 100%;
+  height: 112.5%;
+} */
+input#search_user {
+    width: 266px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    border-bottom: 2px solid #033933;
+    outline: none;
+    float: left;
+    padding-left: 45px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+button#user_result {
+    position: absolute;
+    left: 8px;
+    border: none;
+    background: none !important;
+    box-shadow: none !important;
+    top: 20px;
+}
+  .season_tab [type=radio] {
+    display: none;   
+  }
+  .season_content {
+    position: absolute;
+    top: 0;
+    left: 286px;
+    /* background: white; */
+    right: 0;
+    bottom: 0;
+    border: 1px solid #00000017;
+   }
+  .season_content span {
+    animation: 0.5s ease-out 0s 1 slideInFromTop; 
+  }
+  /* [type=radio]:checked ~ label {
+    background: white;
+    z-index: 2;
+  } */
+  [type=radio]:checked ~ label ~ .season_content {
+    z-index: 1;
+  }
+.user-item.active {
+    background-color: #033933;
+    border-left: 3px solid #8bc34a;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid #8bc34a;
+    color: #fff;
+}
+.form-input {
+    position: unset;
+    bottom: 0;
+    display: flex;
+    width: 95%;
+    left: 0;
+    margin: auto;
+    right: 0;
+} 
+div input.user-input {
+  width: 100%;
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+/* .recording::before {
+  content: "\f111";
+  padding-right: 10px;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #a40505;
+} */
+.chat-messages {
+    height: 480px;
+    overflow-y: auto;
+    padding: 20px;
+    scroll-behavior: smooth; /* Smooth scrolling */
+    display: flex;
+    flex-direction: column; /* New messages appear at bottom */
+}
+.main-panel{
+    height: 100vh;
+    display: flex;
+}
+/* Left Sidebar (Recent Chats) */
+.left-panel {
+    width: 30%;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-panel .search-bar {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.left-panel .search-bar input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.recent-chats {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.recent-chat {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.recent-chat img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.chat-info {
+    flex-grow: 1;
+}
+
+.chat-info h5 {
+    margin: 0;
+    font-weight: 500;
+}
+
+.chat-info p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.chat-timestamp {
+    font-size: 0.8em;
+    color: #999;
+}
+.chat-date-divider {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size:16px;
+    color: #fff;
+    display: inline-block;
+    border-top:1px solid #ffffff30;
+    border-bottom:1px solid #ffffff30;
+    padding:8px 0px;
+}
+/* Profile Css  */
+
+.my_profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #033933;
+    padding: 13px 12px;
+}
+.profile_name_wrap p {
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+.profile_wrapper img {
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.search_wrapper {
+    position: relative;
+}
+
+/* Right Chat Window */
+.chat-window {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    position: relative;
+}
+
+.chat-header {
+    background-color: #1C504A;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border-bottom: 1px solid #ddd; */
+}
+
+.chat-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.message.sent img.chat-image {
+  margin-left: auto;
+}
+img.chat-image {
+  width: 150px;
+}
+img.thumb {
+  position: absolute;
+  height: 100px;
+  right: 41.4%;
+  margin-top: -198px;
+  width: 135px;
+  object-fit: contain;
+  padding: 10px;
+  border: 1px solid #fff;
+  background: #fff;
+}
+.chat-header .header-info {
+    flex-grow: 1;
+}
+
+.chat-header .header-info h4 {
+    margin: 0;
+    font-weight: 500;
+    color: #fff;
+}
+
+.chat-header .header-info p {
+    margin: 5px 0 0;
+    font-size: 0.7em;
+    color: #ddd;
+}
+
+.chat-body {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-bottom: 20px;
+    background-image: url(../images/background.jpg);
+    background-size: contain;
+    position: relative;
+}
+.season_tab label span {
+  font-size: 14px;
+}
+.message.received {
+  flex-direction: row-reverse;
+  justify-content: left;
+  align-items: center;
+}
+
+.message {
+  margin-bottom: 20px;
+  /* display: flex; */
+  align-items: center;
+  gap: 5px;
+  display: grid;
+}
+.message.sent {
+  text-align: right;
+}
+.message.sent .bubble {
+    background-color: #dcf8c6;
+    margin-left: auto;
+}
+
+.message.received .bubble {
+    background-color: #fff;
+    margin-right: auto;
+}
+
+.bubble {
+    /* max-width: 60%; */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+}
+
+.timestamp {
+    font-size: 0.75em;
+    color: #999;
+    margin-top: 5px;
+}
+
+/* Chat Input Area */
+.chat-input {
+    background-color: #f0f0f0;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ddd;
+}
+
+
+.form-input button {
+    margin-left: 10px;
+    background-color: #033933;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-input button:hover , .form-input button:focus {
+    background-color: #033933 !important;
+}
+label.file_up {
+  background:transparent;
+  border:1px solid #cdcdcd;
+  padding:15px 35px;
+  color: #696969;
+ }
+ 
+ label.file_up:hover, label.file_up:active {
+ background: #f8f8f8;
+ }
+ 
+ label.file_up > i.fa {
+   font-size:15px;
+   margin-right:10px;
+   color: #1081e0;
+ }
+ 
+ .attachment {
+  position: absolute;
+  right: 0%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px #0000000d;
+  width: max-content;
+  margin-top: -90px;
+  display: none;
+}
+.form-input button i {
+  width: 20px;
+  height: 20px;
+} 
+.audio-rec {
+  position: absolute;
+  right: 20px;
+  /* z-index: 9; */
+  /* display: none; */
+  margin-top: -170px;
+  margin-right: 20px;
+  height: 74px;
+}
+.controllers button {
+  font-size: unset;
+  border-radius: 0px;
+}
+.audio-rec .container {
+  background: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px 0px #00000021;
+  gap: 20px;
+}
+.display p {
+  margin: 0;
+}
+.recorder-container {background: #fff;width: 100%;position: relative;left: -30px;top: -106px;padding: 20px;}
+.recorder-container .controls button {
+    border-radius: 0;
+    margin: 5px;
+}
+.controls {
+    display: flex;
+}
+.recorder-container h1, .recorder-container h2 {
+    font-size: 20px;
+}
+
+.recorder-container button[disabled] {
+  box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 1);
+  /* background: #0ae; */
+}
+.recorder-container button:hover{
+  background: #075e54;
+}
+.recorder-container button#startRecord[disabled] {
+  box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 1);
+  background: #a40505;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: normal;
+  padding: 0.5rem 0 0 0;
+}
+
+.main-controls {
+  padding: 0.5rem 0;
+}
+
+canvas {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#buttons button {
+  font-size: 1rem;
+  padding: 1rem;
+  /* width: calc(50% - 0.25rem); */
+  width: auto;
+  border-radius: 0;
+}
+article.clip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+button {
+  font-size: 1rem;
+  background: #0088cc;
+  text-align: center;
+  color: white;
+  border: none;
+  transition: all 0.2s;
+  padding: 0.5rem;
+}
+
+button:hover,
+button:focus {
+  box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 1);
+  background: #0ae;
+}
+
+button:active {
+  box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(2px);
+}
+
+/* Make the clips use as much space as possible, and
+ * also show a scrollbar when there are too many clips to show
+ * in the available space */
+.sound-clips {
+  flex: 1;
+  overflow: auto;
+}
+
+section,
+article {
+  display: block;
+}
+
+.clip {
+  padding-bottom: 1rem;
+}
+
+audio {
+  width: 100%;
+  display: block;
+  margin: 1rem auto 0.5rem;
+}
+
+.clip p {
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.clip button {
+  font-size: 1rem;
+  float: right;
+}
+.chat-messages audio {
+  width: 300px;
+}
+button.delete {
+  background: #f00;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  float: none;
+  border-radius: 0;
+}
+
+/* Checkbox hack to control information box display */
+
+label {
+  font-size: 3rem;
+  position: absolute;
+  top: 2px;
+  right: 3px;
+  z-index: 5;
+  cursor: pointer;
+  background-color: black;
+  border-radius: 10px;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  top: -100px;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: 0.3s all ease-out;
+  background-color: #efefef;
+  padding: 1rem;
+}
+
+aside p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+aside a {
+  color: #666;
+}
+
+/* Toggled State of information box */
+input[type="checkbox"]:checked ~ aside {
+  transform: translateX(0);
+}
+
+/* Cursor when clip name is clicked over */
+
+.clip p {
+  cursor: pointer;
+}
+.audio.message.sent {
+  justify-content: flex-end;
+}
+/* Adjustments for wider screens */
+@media all and (min-width: 800px) {
+  /* Don't take all the space as readability is lost when line length
+     goes past a certain size */
+  .wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.attachment [type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+.attachment [type="file"] + label {
+  background: #f15d22;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+  outline: none;
+  padding: 1rem 50px;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+}
+.attachment [type="file"] + label:hover {
+  background-color: #d3460d;
+}
+.attachment [type="file"] + label.btn-2 {
+  background-color: #1C504A;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.attachment [type="file"] + label.btn-2::before {
+  color: #fff;
+  content: '\f0ee';
+  font-family: "Font Awesome 6 Free";
+  font-size: 100%;
+  height: 100%;
+  font-weight: 900;
+  right: 120%;
+  line-height: 3.3;
+  position: absolute;
+  top: 0px;
+  transition: all 0.3s;
+}
+.attachment [type="file"] + label.btn-2:hover {
+  background-color: #033933;
+}
+.attachment [type="file"] + label.btn-2:hover::before {
+  right: 80%;
+}
+.fa-thin.fa-file-arrow-down {
+    font-weight: 800;
+    font-family: "Font Awesome 6 Free";
+    color: #075e54;
+    font-size: 80px;
+    fill: #075e54;
+    width: 50px;
+}
+
+
+@media screen and (max-width:880px){
+.season_tab {
+    width: 230px;
+}
+.season_content {
+    left: 230px;
+}
+input#search_user {
+    width: 212px;
+}
+}
+
+@media screen and (max-width:767px){
+.season_tabs {
+    margin-top: 60px;
+}
+.season_tab {
+    width: 68px;
+}
+button#user_result {
+    top: -130px;
+    z-index: 9;
+    left: 0;
+}
+.season_tab label {
+    padding: 5px;
+    flex-direction: column;
+    margin-left: 10px;
+}
+input#search_user {
+    float: none;
+    position: absolute;
+    top: -150px;
+    margin-left: 0;
+    width: 100%;
+}
+.season_content {
+    left: 70px;
+}
+.season_tab label span:nth-child(2) {display: none;}
+.form-input {
+    flex-wrap: wrap;
+    justify-content: end;
+    row-gap: 15px;
+}
+.season_tabs {
+    min-height: 681px;
+}
+.chat-messages {
+    padding: 10px;
+}
+.chat-messages audio {
+    width: 250px;
+}
+.my_profile {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    justify-content: center;
+    width: 70px;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 6px;
+}
+  .profile_wrapper img {
+    width: 30px;
+    height: 30px;
+}
+.season_tab label img {
+    margin: 0;
+}
+}
