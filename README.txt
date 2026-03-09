@@ -1,10 +1,10 @@
 === Instant Chat Assistant ===
 Contributors: abdullahart
 Requires at least: 5.0
-Tested up to: 6.8
+Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.0.4
-Tags: chatbot, communication, AI
+Stable tag: 1.0.5
+Tags: chat, live chat, live support, chatbot, free live chat
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,12 +18,12 @@ It includes **separate upload buttons** for images and documents, supports **aud
 
 === 🌟 Key Features ===
 
-💬 **Real-time Messaging** – Seamless communication between registered users.  
-🖼️ **Image Uploads** – Share images instantly in the chat.  
-📄 **Document Uploads** – Send PDF, DOC, and other files with a dedicated upload button.  
-🎤 **Audio Uploads** – Record and send voice notes.  
-🔔 **Instant Notifications** – Get notified instantly when a new message arrives.  
-📱 **Responsive Design** – Works perfectly on desktop, tablet, and mobile. 
+💬 Live Chat & Real-time Messaging – Chat instantly with registered users with real-time updates.
+🖼️ Image Uploads – Share images instantly in the chat.
+📄 Document Uploads – Send PDF, DOC, and other files with a dedicated upload button.
+🎤 Audio Uploads – Record and send voice notes.
+🔔 Instant Notifications – Get notified immediately when a new message arrives.
+📱 Responsive Design – Works perfectly on desktop, tablet, and mobile.
 
 
 === Use Cases ===

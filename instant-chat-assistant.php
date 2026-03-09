@@ -16,7 +16,7 @@
  * Plugin Name:       Instant Chat Assistant
  * Plugin URI:        https://github.com/abdullahnart/instant-chat-assistant
  * Description:       Instant Chat Assistant 
- * Version:           1.0.4
+ * Version:           1.0.5
  * Author:            Abdullah Naseem
  * Author URI:        https://github.com/abdullahnart/
  * License:           GPL-2.0+
